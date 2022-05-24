@@ -1,24 +1,22 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 
+// ignore: must_be_immutable
 class HomePage extends StatelessWidget {
-  HomePage({Key? key}) : super(key: key);
+  const HomePage({Key? key}) : super(key: key);
 
-  Color backgroundColor = Color.fromARGB(255, 241, 245, 249);
+  final Color backgroundColor = const Color.fromARGB(255, 224, 230, 236);
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: backgroundColor,
       body: SafeArea(
-        child: Container(
-          // margin: EdgeInsets.symmetric(horizontal: 16),
-          child: Column(
-            children: <Widget>[
-              _header(),
-              _containerServies(),
-            ],
-          ),
+        child: Column(
+          children: <Widget>[
+            _header(),
+            _containerServies(),
+          ],
         ),
       ),
     );
@@ -37,7 +35,7 @@ _header() {
             quarterTurns: 1,
             child: IconButton(
               onPressed: () {},
-              icon: Icon(
+              icon: const Icon(
                 Icons.signal_cellular_alt_2_bar,
                 size: 30,
               ),
@@ -45,7 +43,7 @@ _header() {
           ),
           IconButton(
             onPressed: () {},
-            icon: Icon(
+            icon: const Icon(
               Icons.notifications,
               color: Colors.grey,
               size: 25,
@@ -60,7 +58,7 @@ _header() {
 
 _userName(message, nameUser) {
   return Container(
-    padding: EdgeInsets.symmetric(horizontal: 16),
+    padding: const EdgeInsets.symmetric(horizontal: 16),
     width: double.infinity,
     height: 150,
     child: Column(
@@ -69,11 +67,11 @@ _userName(message, nameUser) {
       children: <Widget>[
         Text(
           message,
-          style: TextStyle(fontSize: 25, color: Colors.grey),
+          style: const TextStyle(fontSize: 25, color: Colors.grey),
         ),
         Text(
           nameUser,
-          style: TextStyle(
+          style: const TextStyle(
             fontSize: 30,
             fontWeight: FontWeight.bold,
             color: Color.fromARGB(255, 15, 32, 68),
@@ -85,7 +83,7 @@ _userName(message, nameUser) {
 }
 
 _containerServies() {
-  return Container(
+  return SizedBox(
     width: double.infinity,
     height: 300,
     child: ListView(
@@ -120,15 +118,15 @@ _containerServies() {
 // }
 
 _dropbox() {
-  Color backgroundDropbox = const Color.fromARGB(255, 61, 114, 222);
+  Color backgroundDropbox = const Color.fromARGB(255, 57, 90, 189);
 
-  final String dropboxLogo = 'assets/dropbox.svg';
+  const String dropboxLogo = 'assets/dropbox.svg';
 
   return Container(
     // padding: EdgeInsets.only(right: 20),
     // transform: Matrix4.translationValues(-20.0, 0.0, 0.0),
 
-    margin: EdgeInsets.only(left: 16, right: 16, top: 20, bottom: 10),
+    margin: const EdgeInsets.only(left: 16, right: 16, top: 20, bottom: 10),
     height: 150,
     width: 260,
     decoration: BoxDecoration(
@@ -145,7 +143,7 @@ _dropbox() {
           decoration: BoxDecoration(
               color: Colors.white,
               borderRadius: BorderRadius.circular(50),
-              boxShadow: [
+              boxShadow: const [
                 BoxShadow(
                   color: Colors.black26,
                   offset: Offset(0, 10),
@@ -161,13 +159,13 @@ _dropbox() {
         iconsDropbox(),
         Container(
           width: double.infinity,
-          margin: EdgeInsets.symmetric(horizontal: 16, vertical: 32),
+          margin: const EdgeInsets.symmetric(horizontal: 16, vertical: 32),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: <Widget>[
               Container(
-                margin: EdgeInsets.only(bottom: 10),
-                child: Text(
+                margin: const EdgeInsets.only(bottom: 10),
+                child: const Text(
                   "Dropbox",
                   style: TextStyle(
                     fontSize: 25,
@@ -177,9 +175,9 @@ _dropbox() {
               ),
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: <Widget>[
+                children: const <Widget>[
                   Padding(
-                    padding: const EdgeInsets.only(bottom: 8),
+                    padding: EdgeInsets.only(bottom: 8),
                     child: Text(
                       "650gb",
                       style: TextStyle(
@@ -188,7 +186,7 @@ _dropbox() {
                     ),
                   ),
                   Padding(
-                    padding: const EdgeInsets.only(bottom: 8),
+                    padding: EdgeInsets.only(bottom: 8),
                     child: Text(
                       "100gb",
                       style: TextStyle(color: Colors.white),
@@ -196,7 +194,7 @@ _dropbox() {
                   ),
                 ],
               ),
-              LinearProgressIndicator(
+              const LinearProgressIndicator(
                 minHeight: 5.0,
                 value: 0.6,
                 backgroundColor: Colors.white,
@@ -212,7 +210,7 @@ _dropbox() {
 
 iconsDropbox() {
   Color iconsColor = const Color.fromARGB(255, 126, 166, 242);
-  Color iconsBackgroundColor = const Color.fromARGB(255, 38, 90, 191);
+  Color iconsBackgroundColor = Colors.black12;
 
   return Row(
     mainAxisAlignment: MainAxisAlignment.spaceEvenly,

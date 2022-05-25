@@ -1,10 +1,14 @@
 # Storage clone
 
-Exercício UI Flutter, pretendo dividir em algumas etapas para adicionar cada elemento aos poucos.
+Exercício UI clone com Flutter, não irei implementar por completo todas features que contém no protótipo, porém o ideal é adicionar o necessário para ser parecido.
 
 Você pode [acessar](https://dribbble.com/shots/6794395-Storages-Management-App/) aqui, caso queira conhecer o projeto completo.
 ![](screendribbble.png)
 
-## Primeira parte
+## Primeiro dia
 
 ![](screen.png)
+
+## Finalizado primeira parte
+![](complete.gif)
+
